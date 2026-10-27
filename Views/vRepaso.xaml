@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="repasoSemana4.Views.vRepaso"
+             Title="vRepaso">
+
+
+
+
+    <ContentPage.Resources>
+        <Style TargetType="Entry"
+               >
+            <Setter Property="TextColor" Value="Blue"></Setter>
+            <Setter Property="BackgroundColor" Value="Beige"></Setter>
+
+        </Style>
+        <Style TargetType="Label" x:Key="labelEstilo"
+               
+               >
+            <Setter Property="TextColor" Value="Brown"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+        Spacing="20"
+        Padding="20">
+        <Label 
+            Text="Ventana de registro"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Style="{StaticResource labelEstilo}"/>
+
+        <Image Source="uisrael.png"
+               WidthRequest="200">
+            
+        </Image>
+
+        <Grid RowSpacing="15"
+              ColumnSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Desarrollado por:"
+                   Grid.Row="0"
+                   Grid.Column="0">
+                
+            </Label>
+            <Label Text="Carrera: "
+                   Grid.Row="0"
+                   Grid.Column="1"> 
+
+            </Label>
+            <Label Text="Nivel "
+                   Grid.Row="0"
+                   Grid.Column="2">
+
+            </Label>
+
+            <Entry x:Name="txtNombre"
+                   IsReadOnly="True"
+                   Grid.Row="1"
+                   Grid.Column="0"
+             ></Entry>
+            <Entry x:Name="txtCarrera"
+                   IsReadOnly="True"                   
+                   Grid.Row="1"
+                   Grid.Column="1"
+             ></Entry>
+            <Entry x:Name="txtNivel"
+                   IsReadOnly="True"
+                   Grid.Row="1"
+                   Grid.Column="2"
+             ></Entry>
+
+        </Grid>
+
+
+        <Grid RowSpacing="15" ColumnSpacing="20"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+
+            <Label Text="USUARIO"
+        Grid.Row="0"
+        Grid.Column="0"
+        >
+
+            </Label>
+            <Entry x:Name="txtUsuario"
+        Placeholder="Ingresa el usuario"
+        Grid.Row="0"
+        Grid.Column="1"
+        >
+
+            </Entry>
+            <Label Text="CONTRASEÑA"
+        Grid.Row="1"
+        Grid.Column="0"
+>
+
+            </Label>
+            <Entry x:Name="txtContraseña"
+        Placeholder="Ingresa la contraseña"
+        IsPassword="True"
+        Grid.Row="1"
+        Grid.Column="1"
+        >
+
+            </Entry>
+
+            <Button x:Name="btnIniciarSesion"
+         Text="Iniciar Sesion"
+         Clicked="btnIniciarSesion_Clicked"
+         Grid.Row="2"
+         Grid.Column="0"
+         >
+
+            </Button>
+
+            <Button x:Name="btnRegistrarse"
+         Text="Registrar Usuario"
+         Clicked="btnRegistrarse_Clicked"
+         Grid.Row="2"
+         Grid.Column="1"
+         >
+
+            </Button>
+        </Grid>
+
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
